@@ -1,1 +1,85 @@
-
+{
+  "name": "RoommateRequest",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "User looking for roommate"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Name"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "any"
+      ],
+      "description": "Gender preference"
+    },
+    "occupation": {
+      "type": "string",
+      "enum": [
+        "student",
+        "professional"
+      ],
+      "description": "Occupation"
+    },
+    "budget_min": {
+      "type": "number",
+      "description": "Minimum budget"
+    },
+    "budget_max": {
+      "type": "number",
+      "description": "Maximum budget"
+    },
+    "preferred_location": {
+      "type": "string",
+      "description": "Preferred area"
+    },
+    "preferred_sharing": {
+      "type": "string",
+      "enum": [
+        "double",
+        "triple"
+      ],
+      "description": "Looking for sharing type"
+    },
+    "move_in_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Expected move-in date"
+    },
+    "lifestyle": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Lifestyle tags like non-smoker, vegetarian, etc"
+    },
+    "about": {
+      "type": "string",
+      "description": "About the person"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "matched",
+        "closed"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "user_name",
+    "gender",
+    "occupation"
+  ]
+}
