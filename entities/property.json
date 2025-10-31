@@ -1,1 +1,163 @@
-
+{
+  "name": "Property",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Property name"
+    },
+    "owner_name": {
+      "type": "string",
+      "description": "Owner name"
+    },
+    "owner_phone": {
+      "type": "string",
+      "description": "Owner contact number"
+    },
+    "owner_email": {
+      "type": "string",
+      "description": "Owner email"
+    },
+    "property_type": {
+      "type": "string",
+      "enum": [
+        "pg",
+        "hostel",
+        "flat"
+      ],
+      "description": "Type of accommodation"
+    },
+    "gender_type": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "co-living"
+      ],
+      "description": "Who can stay"
+    },
+    "address": {
+      "type": "string",
+      "description": "Full address"
+    },
+    "area": {
+      "type": "string",
+      "description": "Area/locality name"
+    },
+    "city": {
+      "type": "string",
+      "description": "City"
+    },
+    "landmark": {
+      "type": "string",
+      "description": "Nearby landmark"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude coordinate"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude coordinate"
+    },
+    "distance_from_landmark": {
+      "type": "number",
+      "description": "Distance in kilometers from main landmark"
+    },
+    "rent_single": {
+      "type": "number",
+      "description": "Rent for single occupancy"
+    },
+    "rent_double": {
+      "type": "number",
+      "description": "Rent for double sharing"
+    },
+    "rent_triple": {
+      "type": "number",
+      "description": "Rent for triple sharing"
+    },
+    "deposit": {
+      "type": "number",
+      "description": "Security deposit amount"
+    },
+    "available_rooms": {
+      "type": "number",
+      "description": "Number of rooms available"
+    },
+    "total_rooms": {
+      "type": "number",
+      "description": "Total rooms in property"
+    },
+    "facilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available facilities like WiFi, AC, Food, etc"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Property rules"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Property image URLs"
+    },
+    "virtual_tour_url": {
+      "type": "string",
+      "description": "360\u00b0 virtual tour URL or panorama image"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether property is verified"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating"
+    },
+    "total_reviews": {
+      "type": "number",
+      "description": "Number of reviews"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "food_included": {
+      "type": "boolean",
+      "description": "Whether food is included"
+    },
+    "food_type": {
+      "type": "string",
+      "enum": [
+        "veg",
+        "non-veg",
+        "both"
+      ],
+      "description": "Type of food provided"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "pending_verification"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "property_type",
+    "gender_type",
+    "address",
+    "city"
+  ]
+}
